@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="137.907519">
-<testcase classname="Demo1" name="User is able to Login and confirm data is getting transferred from GCS to BigQuery" time="137.907519">
-<failure message="java.lang.AssertionError&#10;&#9;at org.junit.Assert.fail(Assert.java:87)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:42)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:53)&#10;&#9;at io.cdap.plugin.gcp.stepsdesign.GCSBasicDemo.verifyThePipelineStatusIs(GCSBasicDemo.java:155)&#10;&#9;at ✽.Verify the pipeline status is &quot;Succeeded&quot;(file:src/e2e-test/features/DemoGcs.feature:17)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="81.031348">
+<testcase classname="Demo1" name="User is able to Login and confirm data is getting transferred from GCS to BigQuery" time="81.031348">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS bucket...................................................passed
 When Target is BigQuery.....................................................passed
 Then Link Source and Sink to establish connection...........................passed
@@ -13,18 +13,10 @@ Then Save and Deploy Pipeline...............................................pass
 Then Run the Pipeline in Runtime............................................passed
 Then Wait till pipeline is in running state.................................passed
 Then Open Logs..............................................................passed
-Then Verify the pipeline status is "Succeeded"..............................failed
-Then validate successMessage is displayed...................................skipped
-Then Get Count of no of records transferred to BigQuery in "tableDemo"......skipped
-Then Delete the table "tableDemo"...........................................skipped
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at io.cdap.plugin.gcp.stepsdesign.GCSBasicDemo.verifyThePipelineStatusIs(GCSBasicDemo.java:155)
-	at ✽.Verify the pipeline status is "Succeeded"(file:src/e2e-test/features/DemoGcs.feature:17)
-]]></failure>
+Then Verify the pipeline status is "Succeeded"..............................passed
+Then validate successMessage is displayed...................................passed
+Then Get Count of no of records transferred to BigQuery in "tableDemo"......passed
+Then Delete the table "tableDemo"...........................................passed
+]]></system-out>
 </testcase>
 </testsuite>
