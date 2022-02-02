@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="122.978957">
-<testcase classname="Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="122.978957">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="105.888382">
+<testcase classname="Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="105.888382">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Target is GCS bucket...................................................passed
