@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber Reports</td>
+        <td>1</td>
+      <td>08 Feb 2022, 22:25</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">BeforeActions.setUp(Scenario)</td>
+              <td>43</td>
+              <td class="duration" data-value="44399259">0.044</td>
+              <td class="duration" data-value="44399259">1.897</td>
+              <td class="duration" data-value="1909168157">1.909</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.closeTheBigQueryProperties()</td>
+              <td>21</td>
+              <td class="duration" data-value="144175261">0.144</td>
+              <td class="duration" data-value="144175261">0.168</td>
+              <td class="duration" data-value="3027680492">3.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.enterBigQueryPropertyDataset(String)</td>
+              <td>10</td>
+              <td class="duration" data-value="366121904">0.366</td>
+              <td class="duration" data-value="366121904">0.481</td>
+              <td class="duration" data-value="3661219049">3.661</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.enterBigQueryPropertyDatasetProjectId(String)</td>
+              <td>10</td>
+              <td class="duration" data-value="288101270">0.288</td>
+              <td class="duration" data-value="288101270">0.339</td>
+              <td class="duration" data-value="2881012702">2.881</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.enterBigQueryPropertyProjectId(String)</td>
+              <td>10</td>
+              <td class="duration" data-value="1054515924">1.054</td>
+              <td class="duration" data-value="1054515924">1.171</td>
+              <td class="duration" data-value="10545159248">10.545</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.enterBigQueryPropertyReferenceName()</td>
+              <td>13</td>
+              <td class="duration" data-value="1034135816">1.034</td>
+              <td class="duration" data-value="1034135816">1.299</td>
+              <td class="duration" data-value="13443765617">13.443</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.enterBiqQueryPropertyEncryptionKeyNameIfCmekIsEnabled(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="863625642">0.863</td>
+              <td class="duration" data-value="863625642">2.007</td>
+              <td class="duration" data-value="3454502571">3.454</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.enterTheBigQueryPropertiesWithBlankProperty(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1130679319">1.130</td>
+              <td class="duration" data-value="1130679319">1.586</td>
+              <td class="duration" data-value="6784075918">6.784</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.getCountOfNoOfRecordsTransferredToTargetBigQueryTable()</td>
+              <td>10</td>
+              <td class="duration" data-value="645419294">0.645</td>
+              <td class="duration" data-value="645419294">1.168</td>
+              <td class="duration" data-value="6454192949">6.454</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.validatePartitionDateInOutputPartitionedTable()</td>
+              <td>1</td>
+              <td class="duration" data-value="1795159501">1.795</td>
+              <td class="duration" data-value="1795159501">1.795</td>
+              <td class="duration" data-value="1795159501">1.795</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.validatePartitioningIsNotDoneOnTheOutputTable()</td>
+              <td>1</td>
+              <td class="duration" data-value="229849873">0.229</td>
+              <td class="duration" data-value="229849873">0.229</td>
+              <td class="duration" data-value="229849873">0.229</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.validateRecordsTransferredToTargetTableIsEqualToNumberOfRecordsFromSourceTableWithFilter(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="852436164">0.852</td>
+              <td class="duration" data-value="852436164">0.852</td>
+              <td class="duration" data-value="852436164">0.852</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.validateTheCmekKeyOfTargetBigQueryTableIfCmekIsEnabled(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="67987427">0.067</td>
+              <td class="duration" data-value="67987427">0.135</td>
+              <td class="duration" data-value="135974855">0.135</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQueryBase.validateTheRecordsAreNotCreatedInOutputTable()</td>
+              <td>1</td>
+              <td class="duration" data-value="529894901">0.529</td>
+              <td class="duration" data-value="529894901">0.529</td>
+              <td class="duration" data-value="529894901">0.529</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySink.clickOnPreviewDataForBigQuerySink()</td>
+              <td>3</td>
+              <td class="duration" data-value="285617806">0.285</td>
+              <td class="duration" data-value="285617806">0.326</td>
+              <td class="duration" data-value="856853418">0.856</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySink.enterBigQuerySinkPropertyTableName()</td>
+              <td>2</td>
+              <td class="duration" data-value="567850189">0.567</td>
+              <td class="duration" data-value="567850189">0.580</td>
+              <td class="duration" data-value="1135700379">1.135</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySink.enterTheBigQuerySinkMandatoryProperties()</td>
+              <td>11</td>
+              <td class="duration" data-value="4229686563">4.229</td>
+              <td class="duration" data-value="4229686563">5.104</td>
+              <td class="duration" data-value="46526552196">46.526</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySink.openBigQuerySinkProperties()</td>
+              <td>16</td>
+              <td class="duration" data-value="185899361">0.185</td>
+              <td class="duration" data-value="185899361">0.252</td>
+              <td class="duration" data-value="2974389788">2.974</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySink.sinkIsBigQuery()</td>
+              <td>16</td>
+              <td class="duration" data-value="208258070">0.208</td>
+              <td class="duration" data-value="208258070">0.258</td>
+              <td class="duration" data-value="3332129122">3.332</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySink.toggleBigQuerySinkPropertyTruncateTableToTrue()</td>
+              <td>2</td>
+              <td class="duration" data-value="77147006">0.077</td>
+              <td class="duration" data-value="77147006">0.078</td>
+              <td class="duration" data-value="154294013">0.154</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySink.toggleBigQuerySinkPropertyUpdateTableSchemaToTrue()</td>
+              <td>2</td>
+              <td class="duration" data-value="76660666">0.076</td>
+              <td class="duration" data-value="76660666">0.079</td>
+              <td class="duration" data-value="153321333">0.153</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySource.enterBigQuerySourcePropertiesPartitionStartDateAndPartitionEndDate()</td>
+              <td>1</td>
+              <td class="duration" data-value="509269944">0.509</td>
+              <td class="duration" data-value="509269944">0.509</td>
+              <td class="duration" data-value="509269944">0.509</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySource.enterBigQuerySourcePropertiesPartitionStartDateAndPartitionEndDate(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="531435415">0.531</td>
+              <td class="duration" data-value="531435415">0.531</td>
+              <td class="duration" data-value="531435415">0.531</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySource.enterBigQuerySourcePropertyFilter(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="372497024">0.372</td>
+              <td class="duration" data-value="372497024">0.552</td>
+              <td class="duration" data-value="744994049">0.744</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySource.enterBigQuerySourcePropertyTableName()</td>
+              <td>8</td>
+              <td class="duration" data-value="368319124">0.368</td>
+              <td class="duration" data-value="368319124">0.509</td>
+              <td class="duration" data-value="2946552996">2.946</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySource.enterTheBigQuerySourceMandatoryProperties()</td>
+              <td>2</td>
+              <td class="duration" data-value="3109888877">3.109</td>
+              <td class="duration" data-value="3109888877">3.130</td>
+              <td class="duration" data-value="6219777754">6.219</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySource.enterTheBigQuerySourcePropertiesWithIncorrectProperty(String,String)</td>
+              <td>3</td>
+              <td class="duration" data-value="3225858423">3.225</td>
+              <td class="duration" data-value="3225858423">3.494</td>
+              <td class="duration" data-value="9677575270">9.677</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySource.openBigQuerySourceProperties()</td>
+              <td>16</td>
+              <td class="duration" data-value="162033171">0.162</td>
+              <td class="duration" data-value="162033171">0.174</td>
+              <td class="duration" data-value="2592530751">2.592</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySource.sourceIsBigQuery()</td>
+              <td>16</td>
+              <td class="duration" data-value="146244577">0.146</td>
+              <td class="duration" data-value="146244577">0.171</td>
+              <td class="duration" data-value="2339913235">2.339</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">BigQuerySource.validateBigQuerySourceIncorrectPropertyErrorFor(String,String)</td>
+              <td>3</td>
+              <td class="duration" data-value="2731031779">2.731</td>
+              <td class="duration" data-value="2731031779">2.913</td>
+              <td class="duration" data-value="8193095339">8.193</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.closeTheGCSProperties()</td>
+              <td>13</td>
+              <td class="duration" data-value="133935941">0.133</td>
+              <td class="duration" data-value="133935941">0.172</td>
+              <td class="duration" data-value="1741167236">1.741</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.enterGCSPropertyDelimiter(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="107807909">0.107</td>
+              <td class="duration" data-value="107807909">0.151</td>
+              <td class="duration" data-value="431231637">0.431</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.enterGCSPropertyPath(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="506162253">0.506</td>
+              <td class="duration" data-value="506162253">0.506</td>
+              <td class="duration" data-value="506162253">0.506</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.enterGCSPropertyProjectIdAndReferenceName()</td>
+              <td>18</td>
+              <td class="duration" data-value="2336194965">2.336</td>
+              <td class="duration" data-value="2336194965">3.046</td>
+              <td class="duration" data-value="42051509382">42.051</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.enterTheGCSPropertiesWithBlankProperty(String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1389428229">1.389</td>
+              <td class="duration" data-value="1389428229">1.810</td>
+              <td class="duration" data-value="8336569377">8.336</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.selectGCSPropertyFormat(String)</td>
+              <td>18</td>
+              <td class="duration" data-value="204192784">0.204</td>
+              <td class="duration" data-value="204192784">0.673</td>
+              <td class="duration" data-value="3675470125">3.675</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.verifyDataIsTransferredToTargetGCSBucket()</td>
+              <td>4</td>
+              <td class="duration" data-value="104279060">0.104</td>
+              <td class="duration" data-value="104279060">0.111</td>
+              <td class="duration" data-value="417116241">0.417</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.verifyDatatypeOfFieldIsOverriddenToDataTypeInTargetBigQueryTable(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="558247759">0.558</td>
+              <td class="duration" data-value="558247759">0.558</td>
+              <td class="duration" data-value="558247759">0.558</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.verifyGetSchemaFailsWithError()</td>
+              <td>2</td>
+              <td class="duration" data-value="2869706313">2.869</td>
+              <td class="duration" data-value="2869706313">2.901</td>
+              <td class="duration" data-value="5739412626">5.739</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.verifyInvalidBucketNameErrorMessageIsDisplayedForBucket(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2064046744">2.064</td>
+              <td class="duration" data-value="2064046744">2.064</td>
+              <td class="duration" data-value="2064046744">2.064</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.verifyOutputFieldInTargetBigQueryTableContainsPathOfTheGcsBucket(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="766820306">0.766</td>
+              <td class="duration" data-value="766820306">0.766</td>
+              <td class="duration" data-value="766820306">0.766</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSBase.verifyOutputPathFieldErrorMessageForIncorrectPathField(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3087579128">3.087</td>
+              <td class="duration" data-value="3087579128">3.087</td>
+              <td class="duration" data-value="3087579128">3.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSink.clickOnPreviewDataForGCSSink()</td>
+              <td>2</td>
+              <td class="duration" data-value="273761317">0.273</td>
+              <td class="duration" data-value="273761317">0.288</td>
+              <td class="duration" data-value="547522634">0.547</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSink.enterGCSPropertyEncryptionKeyNameIfCmekIsEnabled(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="864197752">0.864</td>
+              <td class="duration" data-value="864197752">1.728</td>
+              <td class="duration" data-value="1728395505">1.728</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSink.enterGCSSinkPropertyPath()</td>
+              <td>2</td>
+              <td class="duration" data-value="1147794429">1.147</td>
+              <td class="duration" data-value="1147794429">1.153</td>
+              <td class="duration" data-value="2295588858">2.295</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSink.enterTheGCSSinkMandatoryProperties()</td>
+              <td>2</td>
+              <td class="duration" data-value="2993243522">2.993</td>
+              <td class="duration" data-value="2993243522">3.004</td>
+              <td class="duration" data-value="5986487044">5.986</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSink.openGCSSinkProperties()</td>
+              <td>7</td>
+              <td class="duration" data-value="172179139">0.172</td>
+              <td class="duration" data-value="172179139">0.202</td>
+              <td class="duration" data-value="1205253974">1.205</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSink.sinkIsGCS()</td>
+              <td>7</td>
+              <td class="duration" data-value="214383710">0.214</td>
+              <td class="duration" data-value="214383710">0.248</td>
+              <td class="duration" data-value="1500685972">1.500</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSink.validateTheCmekKeyOfTargetGCSBucketIfCmekIsEnabled(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="35924541">0.035</td>
+              <td class="duration" data-value="35924541">0.071</td>
+              <td class="duration" data-value="71849083">0.071</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSource.enterGCSSourcePropertyMinimumSplitSizeAndMaximumSplitSize(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="388422377">0.388</td>
+              <td class="duration" data-value="388422377">0.388</td>
+              <td class="duration" data-value="388422377">0.388</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSource.enterGCSSourcePropertyOverrideFieldAndDataType(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="424038952">0.424</td>
+              <td class="duration" data-value="424038952">0.464</td>
+              <td class="duration" data-value="848077904">0.848</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSource.enterGCSSourcePropertyPath(String)</td>
+              <td>15</td>
+              <td class="duration" data-value="2246791874">2.246</td>
+              <td class="duration" data-value="2246791874">2.964</td>
+              <td class="duration" data-value="33701878122">33.701</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSource.enterGCSSourcePropertyPathField(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="366337634">0.366</td>
+              <td class="duration" data-value="366337634">0.518</td>
+              <td class="duration" data-value="732675268">0.732</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSource.enterGCSSourcePropertyRegexPathFilter(String)</td>
+              <td>2</td>
+              <td class="duration" data-value="281100470">0.281</td>
+              <td class="duration" data-value="281100470">0.368</td>
+              <td class="duration" data-value="562200940">0.562</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSource.enterTheGCSSourceMandatoryProperties()</td>
+              <td>2</td>
+              <td class="duration" data-value="8595424453">8.595</td>
+              <td class="duration" data-value="8595424453">8.694</td>
+              <td class="duration" data-value="17190848906">17.190</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSource.openGCSSourceProperties()</td>
+              <td>21</td>
+              <td class="duration" data-value="168696014">0.168</td>
+              <td class="duration" data-value="168696014">0.233</td>
+              <td class="duration" data-value="3542616302">3.542</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSource.sourceIsGCS()</td>
+              <td>21</td>
+              <td class="duration" data-value="158245425">0.158</td>
+              <td class="duration" data-value="158245425">0.228</td>
+              <td class="duration" data-value="3323153926">3.323</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GCSSource.toggleGCSSourcePropertySkipHeaderToTrue()</td>
+              <td>14</td>
+              <td class="duration" data-value="117864886">0.117</td>
+              <td class="duration" data-value="117864886">0.199</td>
+              <td class="duration" data-value="1650108409">1.650</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.closeThePreview()</td>
+              <td>4</td>
+              <td class="duration" data-value="58494964">0.058</td>
+              <td class="duration" data-value="58494964">0.075</td>
+              <td class="duration" data-value="233979857">0.233</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.closeThePreviewData()</td>
+              <td>5</td>
+              <td class="duration" data-value="209424465">0.209</td>
+              <td class="duration" data-value="209424465">0.228</td>
+              <td class="duration" data-value="1047122329">1.047</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.connectSourceAndSinkToEstablishConnection(String,String)</td>
+              <td>17</td>
+              <td class="duration" data-value="372212740">0.372</td>
+              <td class="duration" data-value="372212740">0.401</td>
+              <td class="duration" data-value="6327616593">6.327</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.deployThePipeline()</td>
+              <td>9</td>
+              <td class="duration" data-value="74288768">0.074</td>
+              <td class="duration" data-value="74288768">0.109</td>
+              <td class="duration" data-value="668598912">0.668</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.openAndCaptureLogs()</td>
+              <td>15</td>
+              <td class="duration" data-value="284167431">0.284</td>
+              <td class="duration" data-value="284167431">0.663</td>
+              <td class="duration" data-value="4262511472">4.262</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.openDatafusionProjectToConfigurePipeline()</td>
+              <td>43</td>
+              <td class="duration" data-value="3142684983">3.142</td>
+              <td class="duration" data-value="3142684983">3.809</td>
+              <td class="duration" data-value="135135454270">2:15.135</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.previewAndRunThePipeline()</td>
+              <td>11</td>
+              <td class="duration" data-value="157661057">0.157</td>
+              <td class="duration" data-value="157661057">0.169</td>
+              <td class="duration" data-value="1734271631">1.734</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.runThePipelineInRuntime()</td>
+              <td>15</td>
+              <td class="duration" data-value="3912339441">3.912</td>
+              <td class="duration" data-value="3912339441">4.347</td>
+              <td class="duration" data-value="58685091626">58.685</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.saveAndDeployPipeline()</td>
+              <td>6</td>
+              <td class="duration" data-value="4344932278">4.344</td>
+              <td class="duration" data-value="4344932278">4.388</td>
+              <td class="duration" data-value="26069593668">26.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.saveThePipeline()</td>
+              <td>11</td>
+              <td class="duration" data-value="4237323023">4.237</td>
+              <td class="duration" data-value="4237323023">4.286</td>
+              <td class="duration" data-value="46610553262">46.610</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.validateMandatoryPropertyErrorFor(String)</td>
+              <td>12</td>
+              <td class="duration" data-value="1969421957">1.969</td>
+              <td class="duration" data-value="1969421957">2.138</td>
+              <td class="duration" data-value="23633063492">23.633</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.validateOutputSchemaWithExpectedSchema(String)</td>
+              <td>18</td>
+              <td class="duration" data-value="4171592179">4.171</td>
+              <td class="duration" data-value="4171592179">5.318</td>
+              <td class="duration" data-value="75088659233">1:15.088</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.validatePluginProperties(String)</td>
+              <td>34</td>
+              <td class="duration" data-value="2380591951">2.380</td>
+              <td class="duration" data-value="2380591951">3.363</td>
+              <td class="duration" data-value="80940126360">1:20.940</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.verifyPluginPropertiesValidationFailsWithError(int)</td>
+              <td>2</td>
+              <td class="duration" data-value="1888559363">1.888</td>
+              <td class="duration" data-value="1888559363">1.897</td>
+              <td class="duration" data-value="3777118726">3.777</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.verifyPreviewOutputSchemaMatchesTheOutputSchemaCapturedInProperties()</td>
+              <td>5</td>
+              <td class="duration" data-value="576814858">0.576</td>
+              <td class="duration" data-value="576814858">0.672</td>
+              <td class="duration" data-value="2884074293">2.884</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.verifyThePipelineStatusIs(String)</td>
+              <td>15</td>
+              <td class="duration" data-value="7703210">0.007</td>
+              <td class="duration" data-value="7703210">0.010</td>
+              <td class="duration" data-value="115548150">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.verifyThePreviewOfPipelineIs(String)</td>
+              <td>11</td>
+              <td class="duration" data-value="28439748854">28.439</td>
+              <td class="duration" data-value="28439748854">49.709</td>
+              <td class="duration" data-value="312837237396">5:12.837</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">PipelineSteps.waitTillPipelineIsInRunningState()</td>
+              <td>15</td>
+              <td class="duration" data-value="52560878626">52.560</td>
+              <td class="duration" data-value="52560878626">1:40.578</td>
+              <td class="duration" data-value="788413179401">13:8.413</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.createBucketWithBlobFile()</td>
+              <td>2</td>
+              <td class="duration" data-value="1216328198">1.216</td>
+              <td class="duration" data-value="1216328198">1.224</td>
+              <td class="duration" data-value="2432656397">2.432</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.createBucketWithCSVFile()</td>
+              <td>6</td>
+              <td class="duration" data-value="893273928">0.893</td>
+              <td class="duration" data-value="893273928">1.240</td>
+              <td class="duration" data-value="5359643573">5.359</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.createBucketWithDelimitedFile()</td>
+              <td>3</td>
+              <td class="duration" data-value="785176205">0.785</td>
+              <td class="duration" data-value="785176205">0.816</td>
+              <td class="duration" data-value="2355528616">2.355</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.createBucketWithOutputFieldFile()</td>
+              <td>4</td>
+              <td class="duration" data-value="754274245">0.754</td>
+              <td class="duration" data-value="754274245">0.807</td>
+              <td class="duration" data-value="3017096983">3.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.createBucketWithTSVFile()</td>
+              <td>1</td>
+              <td class="duration" data-value="912954731">0.912</td>
+              <td class="duration" data-value="912954731">0.912</td>
+              <td class="duration" data-value="912954731">0.912</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.createBucketWithTextFile()</td>
+              <td>1</td>
+              <td class="duration" data-value="701435626">0.701</td>
+              <td class="duration" data-value="701435626">0.701</td>
+              <td class="duration" data-value="701435626">0.701</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.createTempPartitionedSourceBQTable()</td>
+              <td>2</td>
+              <td class="duration" data-value="3523242474">3.523</td>
+              <td class="duration" data-value="3523242474">4.620</td>
+              <td class="duration" data-value="7046484948">7.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.createTempSourceBQTable()</td>
+              <td>9</td>
+              <td class="duration" data-value="1934880796">1.934</td>
+              <td class="duration" data-value="1934880796">2.774</td>
+              <td class="duration" data-value="17413927166">17.413</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.deleteSourceBucketWithFile()</td>
+              <td>17</td>
+              <td class="duration" data-value="582294331">0.582</td>
+              <td class="duration" data-value="582294331">0.667</td>
+              <td class="duration" data-value="9899003627">9.899</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.deleteTargetBucketWithFile()</td>
+              <td>4</td>
+              <td class="duration" data-value="850090533">0.850</td>
+              <td class="duration" data-value="850090533">0.892</td>
+              <td class="duration" data-value="3400362135">3.400</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.deleteTempSourceBQTable()</td>
+              <td>11</td>
+              <td class="duration" data-value="839580521">0.839</td>
+              <td class="duration" data-value="839580521">1.179</td>
+              <td class="duration" data-value="9235385739">9.235</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.deleteTempTargetBQTable()</td>
+              <td>13</td>
+              <td class="duration" data-value="751625450">0.751</td>
+              <td class="duration" data-value="751625450">0.951</td>
+              <td class="duration" data-value="9771130851">9.771</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.setTempTargetBQTableName()</td>
+              <td>13</td>
+              <td class="duration" data-value="152520">0.000</td>
+              <td class="duration" data-value="152520">0.000</td>
+              <td class="duration" data-value="1982765">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">TestSetupHooks.setTempTargetGCSBucketName()</td>
+              <td>4</td>
+              <td class="duration" data-value="126265">0.000</td>
+              <td class="duration" data-value="126265">0.000</td>
+              <td class="duration" data-value="505060">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>90</td>
+            <td>749</td>
+            <td class="duration">2.575</td>
+            <td class="duration">13:8.413</td>
+            <td class="duration">32:9.255</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
