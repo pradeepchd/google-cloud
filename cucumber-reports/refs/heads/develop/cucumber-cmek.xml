@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="366.722779">
-<testcase classname="BigQuery sink - Verification of GCS to BigQuery successful data transfer" name="Validate successful records transfer from GCS to BigQuery" time="111.237768">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="323.060894">
+<testcase classname="BigQuery sink - Verification of GCS to BigQuery successful data transfer" name="Validate successful records transfer from GCS to BigQuery" time="101.411175">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is GCS..........................................................passed
 When Sink is BigQuery.......................................................passed
@@ -33,7 +33,7 @@ Then Get count of no of records transferred to target BigQuery Table........pass
 Then Validate the cmek key "cmekBQ" of target BigQuery table if cmek is enabled.passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to GCS successful data transfer" name="Validate successful records transfer from BigQuery to GCS" time="132.068488">
+<testcase classname="BigQuery source - Verification of BigQuery to GCS successful data transfer" name="Validate successful records transfer from BigQuery to GCS" time="112.087132">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is GCS............................................................passed
@@ -66,7 +66,7 @@ Then Verify the pipeline status is "Succeeded"..............................pass
 Then Verify data is transferred to target GCS bucket........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS sink - Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="123.416523">
+<testcase classname="GCS sink - Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="109.562587">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is GCS............................................................passed
