@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="11" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="19" time="312.939003">
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="Verify GCS Source properties validation errors for mandatory fields" time="23.180672">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS properties with blank property "referenceName"...........passed
+Then Validate mandatory property error for "referenceName"..................passed
+]]></system-out>
+</testcase>
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="Verify GCS Source properties validation errors for mandatory fields 2" time="18.057291">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS properties with blank property "path"....................passed
+Then Validate mandatory property error for "path"...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="Verify GCS Source properties validation errors for mandatory fields 3" time="16.69178">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS properties with blank property "format"..................passed
+Then Validate mandatory property error for "format".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error message for invalid bucket name" time="20.075912">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter GCS property projectId and reference name........................passed
+Then Enter GCS property path "gcsInvalidBucketName".........................passed
+Then Select GCS property format "csv".......................................passed
+Then Verify invalid bucket name error message is displayed for bucket "gcsInvalidBucketName".passed
+]]></system-out>
+</testcase>
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error message for incorrect output path field value" time="24.3806">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter GCS property projectId and reference name........................passed
+Then Enter GCS source property path "gcsOutputFieldTestFile"................passed
+Then Select GCS property format "csv".......................................passed
+Then Enter GCS source property path field "gcsInvalidPathField".............passed
+Then Verify Output Path field Error Message for incorrect path field "gcsInvalidPathField".passed
+]]></system-out>
+</testcase>
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error for incorrect delimiter" time="26.519781">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter GCS property projectId and reference name........................passed
+Then Enter GCS source property path "gcsDelimitedFile"......................passed
+Then Select GCS property format "delimited".................................passed
+Then Enter GCS property delimiter "gcsIncorrectDelimiter"...................passed
+Then Toggle GCS source property skip header to true.........................passed
+Then Verify get schema fails with error.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Error for incorrect override field" time="27.595012">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter GCS property projectId and reference name........................passed
+Then Enter GCS source property path "gcsOutputFieldTestFile"................passed
+Then Select GCS property format "csv".......................................passed
+Then Enter GCS source property override field "gcsInvalidOverrideField" and data type "gcsOverrideDataType".passed
+Then Toggle GCS source property skip header to true.........................passed
+Then Verify get schema fails with error.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="GCS source - Verify GCS Source plugin error scenarios" name="To verify Pipeline preview gets failed for incorrect Regex-Path" time="136.712331">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+When Sink is BigQuery.......................................................passed
+Then Connect source as "GCS" and sink as "BigQuery" to establish connection.passed
+Then Open GCS source properties.............................................passed
+Then Enter GCS property projectId and reference name........................passed
+Then Enter GCS source property path "gcsCsvFile"............................passed
+Then Select GCS property format "csv".......................................passed
+Then Enter GCS source property regex path filter "gcsIncorrectRegexPath"....passed
+Then Toggle GCS source property skip header to true.........................passed
+Then Validate output schema with expectedSchema "gcsCsvFileSchema"..........passed
+Then Validate "GCS" plugin properties.......................................passed
+Then Close the GCS properties...............................................passed
+Then Open BigQuery sink properties..........................................passed
+Then Enter the BigQuery sink mandatory properties...........................passed
+Then Validate "BigQuery" plugin properties..................................passed
+Then Close the BigQuery properties..........................................passed
+Then Save the pipeline......................................................passed
+Then Preview and run the pipeline...........................................passed
+Then Verify the preview of pipeline is "failed".............................passed
+]]></system-out>
+</testcase>
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify data is getting transferred from GCS to BigQuery with Mandatory fields" time="2.089017">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:6)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+When Sink is BigQuery.......................................................skipped
+Then Connect source as "GCS" and sink as "BigQuery" to establish connection.skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsCsvFile"............................skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Select GCS property format "csv".......................................skipped
+Then Validate output schema with expectedSchema "gcsCsvFileSchema"..........skipped
+Then Validate "GCS" plugin properties.......................................skipped
+Then Close the GCS properties...............................................skipped
+Then Open BigQuery sink properties..........................................skipped
+Then Enter the BigQuery sink mandatory properties...........................skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Save the pipeline......................................................skipped
+Then Preview and run the pipeline...........................................skipped
+Then Verify the preview of pipeline is "success"............................skipped
+Then Click on preview data for BigQuery sink................................skipped
+Then Verify preview output schema matches the outputSchema captured in properties.skipped
+Then Close the preview data.................................................skipped
+Then Deploy the pipeline....................................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Get count of no of records transferred to target BigQuery Table........skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify successful data transfer from GCS to BigQuery with outputField" time="1.777119">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:37)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+When Sink is BigQuery.......................................................skipped
+Then Connect source as "GCS" and sink as "BigQuery" to establish connection.skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsOutputFieldTestFile"................skipped
+Then Select GCS property format "csv".......................................skipped
+Then Enter GCS source property path field "gcsPathField"....................skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsOutputFieldTestFileSchema".skipped
+Then Validate "GCS" plugin properties.......................................skipped
+Then Close the GCS properties...............................................skipped
+Then Open BigQuery sink properties..........................................skipped
+Then Enter the BigQuery sink mandatory properties...........................skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Save and Deploy Pipeline...............................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Get count of no of records transferred to target BigQuery Table........skipped
+Then Verify output field "gcsPathField" in target BigQuery table contains path of the source GcsBucket "gcsOutputFieldTestFile".skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:37)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer with Datatype override" time="1.761532">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:64)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+When Sink is BigQuery.......................................................skipped
+Then Connect source as "GCS" and sink as "BigQuery" to establish connection.skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsOutputFieldTestFile"................skipped
+Then Select GCS property format "csv".......................................skipped
+Then Enter GCS source property override field "gcsOverrideField" and data type "gcsOverrideDataType".skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsOverrideSchema".........skipped
+Then Validate "GCS" plugin properties.......................................skipped
+Then Close the GCS properties...............................................skipped
+Then Open BigQuery sink properties..........................................skipped
+Then Enter the BigQuery sink mandatory properties...........................skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Save and Deploy Pipeline...............................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Get count of no of records transferred to target BigQuery Table........skipped
+Then Verify datatype of field "gcsOverrideField" is overridden to data type "gcsOverrideDataType" in target BigQuery table.skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:64)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer with Delimiter" time="1.979966">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:91)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+When Sink is BigQuery.......................................................skipped
+Then Connect source as "GCS" and sink as "BigQuery" to establish connection.skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsDelimitedFile"......................skipped
+Then Select GCS property format "delimited".................................skipped
+Then Enter GCS property delimiter "gcsDelimiter"............................skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsDelimitedFileSchema"....skipped
+Then Validate "GCS" plugin properties.......................................skipped
+Then Close the GCS properties...............................................skipped
+Then Open BigQuery sink properties..........................................skipped
+Then Enter the BigQuery sink mandatory properties...........................skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Save and Deploy Pipeline...............................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Get count of no of records transferred to target BigQuery Table........skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:91)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer with blob file by entering MaxMinSplitSize" time="2.191575">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:117)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+When Sink is BigQuery.......................................................skipped
+Then Connect source as "GCS" and sink as "BigQuery" to establish connection.skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsBlobFile"...........................skipped
+Then Select GCS property format "blob"......................................skipped
+Then Enter GCS source property minimum split size "gcsMinSplitSize" and maximum split size "gcsMaxSplitSize".skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsBlobFileSchema".........skipped
+Then Validate "GCS" plugin properties.......................................skipped
+Then Close the GCS properties...............................................skipped
+Then Open BigQuery sink properties..........................................skipped
+Then Enter the BigQuery sink mandatory properties...........................skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Save and Deploy Pipeline...............................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Get count of no of records transferred to target BigQuery Table........skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:117)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Verification of GCS to BQ successful data transfer" name="To verify Successful GCS to BigQuery data transfer using Regex path filter" time="1.727828">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:143)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+When Sink is BigQuery.......................................................skipped
+Then Connect source as "GCS" and sink as "BigQuery" to establish connection.skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsCsvFile"............................skipped
+Then Select GCS property format "csv".......................................skipped
+Then Enter GCS source property regex path filter "gcsRegexPathFilter".......skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsCsvFileSchema"..........skipped
+Then Validate "GCS" plugin properties.......................................skipped
+Then Close the GCS properties...............................................skipped
+Then Open BigQuery sink properties..........................................skipped
+Then Enter the BigQuery sink mandatory properties...........................skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Save and Deploy Pipeline...............................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Get count of no of records transferred to target BigQuery Table........skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSSourceToBigQuery.feature:143)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation" time="1.642168">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:5)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsCsvFile"............................skipped
+Then Select GCS property format "csv".......................................skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsCsvFileSchema"..........skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation 2" time="1.573131">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:5)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsTsvFile"............................skipped
+Then Select GCS property format "tsv".......................................skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsTsvFileSchema"..........skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation 3" time="2.005276">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:5)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsBlobFile"...........................skipped
+Then Select GCS property format "blob"......................................skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsBlobFileSchema".........skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation for delimited files" time="1.478946">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:28)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsDelimitedFile"......................skipped
+Then Select GCS property format "delimited".................................skipped
+Then Enter GCS property delimiter "gcsDelimiter"............................skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsDelimitedFileSchema"....skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:28)
+]]></failure>
+</testcase>
+<testcase classname="GCS source - Validate GCS plugin output schema for different formats" name="GCS Source output schema validation for delimited files 2" time="1.499066">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a4788077cd55dcfd330491acf4f2010a&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:28)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is GCS..........................................................skipped
+Then Open GCS source properties.............................................skipped
+Then Enter GCS property projectId and reference name........................skipped
+Then Enter GCS source property path "gcsTextFile"...........................skipped
+Then Select GCS property format "text"......................................skipped
+Then Enter GCS property delimiter "gcsDelimiter"............................skipped
+Then Toggle GCS source property skip header to true.........................skipped
+Then Validate output schema with expectedSchema "gcsTextFileSchema".........skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4788077cd55dcfd330491acf4f2010a, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.rv4NIq}, goog:chromeOptions: {debuggerAddress: localhost:36489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:36489/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a4788077cd55dcfd330491acf4f2010a
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/source/GCSourceSchema.feature:28)
+]]></failure>
+</testcase>
+</testsuite>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="5" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="13" time="365.491482">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields" time="23.22905">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+Then Open BigQuery source properties........................................passed
+Then Enter the BigQuery properties with blank property "referenceName"......passed
+Then Validate mandatory property error for "referenceName"..................passed
+]]></system-out>
+</testcase>
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 2" time="17.721603">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+Then Open BigQuery source properties........................................passed
+Then Enter the BigQuery properties with blank property "dataset"............passed
+Then Validate mandatory property error for "dataset"........................passed
+]]></system-out>
+</testcase>
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 3" time="15.046992">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+Then Open BigQuery source properties........................................passed
+Then Enter the BigQuery properties with blank property "table"..............passed
+Then Validate mandatory property error for "table"..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values" time="29.734878">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+Then Open BigQuery source properties........................................passed
+Then Enter BigQuery property reference name.................................passed
+Then Enter the BigQuery source properties with incorrect property "dataset" value "bqIncorrectDataset".passed
+Then Validate BigQuery source incorrect property error for table "dataset" value "bqIncorrectDataset".passed
+]]></system-out>
+</testcase>
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 2" time="26.754638">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+Then Open BigQuery source properties........................................passed
+Then Enter BigQuery property reference name.................................passed
+Then Enter the BigQuery source properties with incorrect property "table" value "bqIncorrectTableName".passed
+Then Validate BigQuery source incorrect property error for table "table" value "bqIncorrectTableName".passed
+]]></system-out>
+</testcase>
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 3" time="26.862576">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+Then Open BigQuery source properties........................................passed
+Then Enter BigQuery property reference name.................................passed
+Then Enter the BigQuery source properties with incorrect property "datasetProject" value "bqIncorrectDatasetProjectId".passed
+Then Validate BigQuery source incorrect property error for table "datasetProject" value "bqIncorrectDatasetProjectId".passed
+]]></system-out>
+</testcase>
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds" time="17.545146">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+Then Open BigQuery source properties........................................passed
+Then Enter BigQuery property reference name.................................passed
+Then Enter BigQuery property projectId "bqIncorrectFormatProjectId".........passed
+Then Enter BigQuery property datasetProjectId "projectId"...................passed
+Then Enter BigQuery property dataset "dataset"..............................passed
+Then Enter BigQuery source property table name..............................passed
+Then Verify plugin properties validation fails with 1 error.................passed
+]]></system-out>
+</testcase>
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds 2" time="16.778229">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+Then Open BigQuery source properties........................................passed
+Then Enter BigQuery property reference name.................................passed
+Then Enter BigQuery property projectId "projectId"..........................passed
+Then Enter BigQuery property datasetProjectId "bqIncorrectFormatDatasetProjectId".passed
+Then Enter BigQuery property dataset "dataset"..............................passed
+Then Enter BigQuery source property table name..............................passed
+Then Verify plugin properties validation fails with 1 error.................passed
+]]></system-out>
+</testcase>
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate successful records transfer from BigQuery to BigQuery with filter" time="124.761774">
+<failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (b13a8a14f31d5133af65bab53cbb45cd)] -&gt; xpath: //*[@data-cy='valium-banner-hydrator']] (tried for 5 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b13a8a14f31d5133af65bab53cbb45cd&#10;&#9;at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)&#10;&#9;at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)&#10;&#9;at io.cdap.e2e.utils.SeleniumHelper.waitElementIsVisible(SeleniumHelper.java:105)&#10;&#9;at stepsdesign.PipelineSteps.saveThePipeline(PipelineSteps.java:119)&#10;&#9;at ✽.Save the pipeline(file:src/e2e-test/features/bigquery/source/BigQueryToBigQuery.feature:24)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+When Sink is BigQuery.......................................................passed
+Then Open BigQuery source properties........................................passed
+Then Enter BigQuery property reference name.................................passed
+Then Enter BigQuery property projectId "projectId"..........................passed
+Then Enter BigQuery property datasetProjectId "projectId"...................passed
+Then Enter BigQuery property dataset "dataset"..............................passed
+Then Enter BigQuery source property table name..............................passed
+Then Enter BigQuery source property filter "bqFilter".......................passed
+Then Validate output schema with expectedSchema "bqSourceSchema"............passed
+Then Validate "BigQuery" plugin properties..................................passed
+Then Close the BigQuery properties..........................................passed
+Then Open BigQuery sink properties..........................................passed
+Then Enter the BigQuery sink mandatory properties...........................passed
+Then Validate "BigQuery" plugin properties..................................passed
+Then Close the BigQuery properties..........................................passed
+Then Connect source as "BigQuery" and sink as "BigQuery" to establish connection.passed
+Then Save the pipeline......................................................failed
+Then Preview and run the pipeline...........................................skipped
+Then Verify the preview of pipeline is "success"............................skipped
+Then Click on preview data for BigQuery sink................................skipped
+Then Verify preview output schema matches the outputSchema captured in properties.skipped
+Then Close the preview data.................................................skipped
+Then Deploy the pipeline....................................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Get count of no of records transferred to target BigQuery Table........skipped
+Then Validate records transferred to target table is equal to number of records from source table with filter "bqFilter".skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on LINUX (b13a8a14f31d5133af65bab53cbb45cd)] -> xpath: //*[@data-cy='valium-banner-hydrator']] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b13a8a14f31d5133af65bab53cbb45cd
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at io.cdap.e2e.utils.SeleniumHelper.waitElementIsVisible(SeleniumHelper.java:105)
+	at stepsdesign.PipelineSteps.saveThePipeline(PipelineSteps.java:119)
+	at ✽.Save the pipeline(file:src/e2e-test/features/bigquery/source/BigQueryToBigQuery.feature:24)
+]]></failure>
+</testcase>
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate that pipeline run preview gets failed when incorrect filter values are provided" time="56.119935">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@data-cy='plugin-BigQueryTable-batchsource']&quot;}&#10;  (Session info: headless chrome=92.0.4515.159)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b13a8a14f31d5133af65bab53cbb45cd, findElement {using=xpath, value=//*[@data-cy='plugin-BigQueryTable-batchsource']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b13a8a14f31d5133af65bab53cbb45cd&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)&#10;&#9;at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.selectSourcePlugin(CdfHelper.java:122)&#10;&#9;at io.cdap.plugin.bigquery.stepsdesign.BigQuerySource.sourceIsBigQuery(BigQuerySource.java:44)&#10;&#9;at ✽.Source is BigQuery(file:src/e2e-test/features/bigquery/source/BigQueryToBigQuery.feature:41)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................failed
+When Sink is BigQuery.......................................................skipped
+Then Open BigQuery source properties........................................skipped
+Then Enter BigQuery property reference name.................................skipped
+Then Enter BigQuery property projectId "projectId"..........................skipped
+Then Enter BigQuery property datasetProjectId "projectId"...................skipped
+Then Enter BigQuery property dataset "dataset"..............................skipped
+Then Enter BigQuery source property table name..............................skipped
+Then Enter BigQuery source property filter "bqInvalidFilter"................skipped
+Then Validate output schema with expectedSchema "bqSourceSchema"............skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Open BigQuery sink properties..........................................skipped
+Then Enter the BigQuery sink mandatory properties...........................skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Connect source as "BigQuery" and sink as "BigQuery" to establish connection.skipped
+Then Save the pipeline......................................................skipped
+Then Preview and run the pipeline...........................................skipped
+Then Verify the preview of pipeline is "failed".............................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@data-cy='plugin-BigQueryTable-batchsource']"}
+  (Session info: headless chrome=92.0.4515.159)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b13a8a14f31d5133af65bab53cbb45cd, findElement {using=xpath, value=//*[@data-cy='plugin-BigQueryTable-batchsource']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b13a8a14f31d5133af65bab53cbb45cd
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
+	at io.cdap.e2e.utils.CdfHelper.selectSourcePlugin(CdfHelper.java:122)
+	at io.cdap.plugin.bigquery.stepsdesign.BigQuerySource.sourceIsBigQuery(BigQuerySource.java:44)
+	at ✽.Source is BigQuery(file:src/e2e-test/features/bigquery/source/BigQueryToBigQuery.feature:41)
+]]></failure>
+</testcase>
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are getting transferred with respect to partitioned date" time="4.16595">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b13a8a14f31d5133af65bab53cbb45cd, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b13a8a14f31d5133af65bab53cbb45cd&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/bigquery/source/BigQueryToBigQuery.feature:64)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is BigQuery.....................................................skipped
+When Sink is BigQuery.......................................................skipped
+Then Open BigQuery source properties........................................skipped
+Then Enter BigQuery property reference name.................................skipped
+Then Enter BigQuery property projectId "projectId"..........................skipped
+Then Enter BigQuery property datasetProjectId "projectId"...................skipped
+Then Enter BigQuery property dataset "dataset"..............................skipped
+Then Enter BigQuery source property table name..............................skipped
+Then Enter BigQuery source properties partitionStartDate and partitionEndDate.skipped
+Then Validate output schema with expectedSchema "bqPartitionSourceSchema"...skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Open BigQuery sink properties..........................................skipped
+Then Enter the BigQuery sink mandatory properties...........................skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Connect source as "BigQuery" and sink as "BigQuery" to establish connection.skipped
+Then Save the pipeline......................................................skipped
+Then Preview and run the pipeline...........................................skipped
+Then Verify the preview of pipeline is "success"............................skipped
+Then Click on preview data for BigQuery sink................................skipped
+Then Verify preview output schema matches the outputSchema captured in properties.skipped
+Then Close the preview data.................................................skipped
+Then Deploy the pipeline....................................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Get count of no of records transferred to target BigQuery Table........skipped
+Then Validate partition date in output partitioned table....................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b13a8a14f31d5133af65bab53cbb45cd, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b13a8a14f31d5133af65bab53cbb45cd
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/bigquery/source/BigQueryToBigQuery.feature:64)
+]]></failure>
+</testcase>
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are not getting transferred for future partitioned date" time="3.516113">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b13a8a14f31d5133af65bab53cbb45cd, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b13a8a14f31d5133af65bab53cbb45cd&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/bigquery/source/BigQueryToBigQuery.feature:98)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is BigQuery.....................................................skipped
+When Sink is BigQuery.......................................................skipped
+Then Open BigQuery source properties........................................skipped
+Then Enter BigQuery property reference name.................................skipped
+Then Enter BigQuery property projectId "projectId"..........................skipped
+Then Enter BigQuery property datasetProjectId "projectId"...................skipped
+Then Enter BigQuery property dataset "dataset"..............................skipped
+Then Enter BigQuery source property table name..............................skipped
+Then Enter BigQuery source properties partitionStartDate "bqFuturePartitionStartDate" and partitionEndDate "bqFuturePartitionEndDate".skipped
+Then Validate output schema with expectedSchema "bqPartitionSourceSchema"...skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Open BigQuery sink properties..........................................skipped
+Then Enter the BigQuery sink mandatory properties...........................skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Connect source as "BigQuery" and sink as "BigQuery" to establish connection.skipped
+Then Save and Deploy Pipeline...............................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Validate the records are not created in output table...................skipped
+Then Validate partitioning is not done on the output table..................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b13a8a14f31d5133af65bab53cbb45cd, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b13a8a14f31d5133af65bab53cbb45cd
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/bigquery/source/BigQueryToBigQuery.feature:98)
+]]></failure>
+</testcase>
+<testcase classname="BigQuery source - Verification of BigQuery to GCS successful data transfer" name="Validate successful records transfer from BigQuery to GCS" time="3.254598">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b13a8a14f31d5133af65bab53cbb45cd, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b13a8a14f31d5133af65bab53cbb45cd&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/bigquery/source/BigQueryToGCS.feature:6)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
+When Source is BigQuery.....................................................skipped
+When Sink is GCS............................................................skipped
+Then Open BigQuery source properties........................................skipped
+Then Enter BigQuery property reference name.................................skipped
+Then Enter BigQuery property projectId "projectId"..........................skipped
+Then Enter BigQuery property datasetProjectId "projectId"...................skipped
+Then Enter BigQuery property dataset "dataset"..............................skipped
+Then Enter BigQuery source property table name..............................skipped
+Then Enter BiqQuery property encryption key name "cmekBQ" if cmek is enabled.skipped
+Then Validate output schema with expectedSchema "bqSourceSchema"............skipped
+Then Validate "BigQuery" plugin properties..................................skipped
+Then Close the BigQuery properties..........................................skipped
+Then Open GCS sink properties...............................................skipped
+Then Enter the GCS sink mandatory properties................................skipped
+Then Validate "GCS" plugin properties.......................................skipped
+Then Close the GCS properties...............................................skipped
+Then Connect source as "BigQuery" and sink as "GCS" to establish connection.skipped
+Then Save the pipeline......................................................skipped
+Then Preview and run the pipeline...........................................skipped
+Then Verify the preview of pipeline is "success"............................skipped
+Then Click on preview data for GCS sink.....................................skipped
+Then Verify preview output schema matches the outputSchema captured in properties.skipped
+Then Close the preview data.................................................skipped
+Then Deploy the pipeline....................................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Open and capture logs..................................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Verify data is transferred to target GCS bucket........................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b13a8a14f31d5133af65bab53cbb45cd, get {url=http://localhost:11011/pipelines/ns/default/studio}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.DAdWeL}, goog:chromeOptions: {debuggerAddress: localhost:40343}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40343/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b13a8a14f31d5133af65bab53cbb45cd
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
+	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
+	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
+	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
+	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/bigquery/source/BigQueryToGCS.feature:6)
+]]></failure>
+</testcase>
+</testsuite>
