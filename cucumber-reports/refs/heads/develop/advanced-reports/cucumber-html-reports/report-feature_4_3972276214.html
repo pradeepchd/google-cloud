@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reports</td>
         <td>1</td>
-      <td>14 Feb 2022, 18:59</td>
+      <td>15 Feb 2022, 07:50</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">GCS sink - Verify GCS Sink plugin error scenarios</td>
-          <td      class="passed"    >1</td>
-          <td      class="failed"    >3</td>
-          <td     class="skipped"   >11</td>
+          <td      class="passed"    >15</td>
+          <td >0</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">15</td>
 
+          <td  class="passed"    >3</td>
           <td >0</td>
-          <td  class="failed"    >3</td>
           <td class="total">3</td>
 
-          <td class="duration" data-value="95624843124">1:35.624</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="20531419044">20.531</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -175,7 +175,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
   <span class="name">GCS sink - Verify GCS Sink plugin error scenarios</span>
 
@@ -195,12 +195,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1:35.565</span>
+  <span class="lead-duration duration">6.948</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
   <span class="name">Verify GCS Sink properties validation errors for mandatory fields</span>
 
@@ -211,7 +211,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
@@ -233,7 +233,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">BeforeActions.setUp(Scenario)</span>
 
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 
@@ -250,9 +250,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -262,7 +262,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -270,7 +270,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">45.553</span>
+  <span class="lead-duration duration">3.295</span>
 
 </div>
 
@@ -307,7 +307,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">1:0.032</span>
+  <span class="lead-duration duration">0.298</span>
 
           </div>
 
@@ -315,33 +315,22 @@ $(document).ready(function() {
 
 
 
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-5">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-5" class="collapse collapsable-details " >
-          
-          <pre><p>Exception in capturing screenshot : timeout: Timed out receiving message from renderer: 10.000
-  (Session info: headless chrome=92.0.4515.159)
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32 : org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
-  (Session info: headless chrome=92.0.4515.159)
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
-        </div>
-      </div>
-  </div>
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-5" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_152547280.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-5" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_152547280.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -351,11 +340,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
       <div class="step">
 
 
-<div class="brief step-name-When failed">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">Sink is GCS</span>
 
-  <span class="lead-duration duration">50.012</span>
+  <span class="lead-duration duration">0.293</span>
 
 </div>
 
@@ -363,47 +352,6 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
-          <a>org.openqa.selenium.NoSuchElementException:</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()='Sink ']&quot;}
-  (Session info: headless chrome=92.0.4515.159)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, findElement {using=xpath, value=//*[text()='Sink ']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy23.click(Unknown Source)
-	at io.cdap.e2e.pages.actions.CdfStudioActions.clickSink(CdfStudioActions.java:99)
-	at io.cdap.plugin.gcs.stepsdesign.GCSSink.sinkIsGCS(GCSSink.java:38)
-	at &#10045;.Sink is GCS(file:src/e2e-test/features/gcs/sink/GCSSinkError.feature:6)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -415,7 +363,7 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-6">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -427,13 +375,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-7" class="inner-level collapse collapsable-details ">
+    <div id="after-6" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">1:0.028</span>
+  <span class="lead-duration duration">0.211</span>
 
           </div>
 
@@ -441,33 +389,22 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
-  <div class="outputs inner-level">
-      <div class="output indention">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-8">
-          Output 1
-          <i class="chevron fa fa-fw"></i>
-        </div>
-        <div id="output-8" class="collapse collapsable-details " >
-          
-          <pre><p>Exception in capturing screenshot : timeout: Timed out receiving message from renderer: 10.000
-  (Session info: headless chrome=92.0.4515.159)
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32 : org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 10.000
-  (Session info: headless chrome=92.0.4515.159)
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
-        </div>
-      </div>
-  </div>
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-7" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_670091516.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-7" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_670091516.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -477,11 +414,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">Open GCS sink properties</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.185</span>
 
 </div>
 
@@ -500,9 +437,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-9">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -512,13 +449,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
     </div>
 
-    <div id="after-9" class="inner-level collapse collapsable-details  in ">
+    <div id="after-8" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.238</span>
 
           </div>
 
@@ -527,6 +464,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-9" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1054026469.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-9" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1054026469.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -536,11 +488,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">Enter the GCS properties with blank property <span class="argument">&quot;referenceName&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.135</span>
 
 </div>
 
@@ -559,9 +511,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-10">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-10">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -571,13 +523,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
     </div>
 
-    <div id="after-10" class="inner-level collapse collapsable-details  in ">
+    <div id="after-10" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.224</span>
 
           </div>
 
@@ -586,6 +538,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-11" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-636089251.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-11" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-636089251.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -595,11 +562,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">Validate mandatory property error for <span class="argument">&quot;referenceName&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">2.038</span>
 
 </div>
 
@@ -618,9 +585,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-11">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -630,13 +597,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
     </div>
 
-    <div id="after-11" class="inner-level collapse collapsable-details  in ">
+    <div id="after-12" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.158</span>
 
           </div>
 
@@ -645,6 +612,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-13" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1099586696.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-13" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1099586696.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -671,12 +653,12 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 </div>
 
 
-  <span class="lead-duration duration">0.045</span>
+  <span class="lead-duration duration">6.680</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-12">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-14">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
   <span class="name">Verify GCS Sink properties validation errors for mandatory fields</span>
 
@@ -687,11 +669,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
   </span>
   <div class="description indention"></div>
 
-  <div id="element-12" class="collapse collapsable-details  in ">
+  <div id="element-14" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-13">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-15">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -703,7 +685,7 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
     </div>
 
-    <div id="before-13" class="inner-level collapse collapsable-details ">
+    <div id="before-15" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -726,9 +708,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-16">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -738,15 +720,15 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
   </div>
 
-  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-16" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">0.045</span>
+  <span class="lead-duration duration">3.015</span>
 
 </div>
 
@@ -754,41 +736,6 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32</p></pre>
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
-          <a>org.openqa.selenium.WebDriverException:</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: headless chrome=92.0.4515.159)
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, get {url=http://localhost:11011/pipelines/ns/default/studio}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
-	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
-	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
-	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
-	at &#10045;.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/sink/GCSSinkError.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -800,7 +747,7 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-16">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-17">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -812,13 +759,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-16" class="inner-level collapse collapsable-details ">
+    <div id="after-17" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.184</span>
+  <span class="lead-duration duration">0.255</span>
 
           </div>
 
@@ -829,15 +776,15 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
   <div class="embeddings inner-level">
   <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-17" class="collapsable-control">
+    <div data-toggle="collapse" data-target="#embedding-18" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_56785370.png" download target="_blank">
+      <a href="embeddings/embedding_930755242.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
-    <div id="embedding-17" class="collapse collapsable-details ">
+    <div id="embedding-18" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_56785370.png">
+        <img src="embeddings/embedding_930755242.png">
       </div>
     </div>
   </div>
@@ -851,11 +798,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">Sink is GCS</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.264</span>
 
 </div>
 
@@ -874,9 +821,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-18">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-19">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -886,13 +833,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-18" class="inner-level collapse collapsable-details  in ">
+    <div id="after-19" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.203</span>
 
           </div>
 
@@ -901,6 +848,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-20" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_670091516.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-20" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_670091516.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -910,11 +872,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">Open GCS sink properties</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.154</span>
 
 </div>
 
@@ -933,9 +895,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-19">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-21">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -945,13 +907,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-19" class="inner-level collapse collapsable-details  in ">
+    <div id="after-21" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.217</span>
 
           </div>
 
@@ -960,6 +922,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-22" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1081393924.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-22" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1081393924.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -969,11 +946,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">Enter the GCS properties with blank property <span class="argument">&quot;path&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.282</span>
 
 </div>
 
@@ -992,9 +969,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-20">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-23">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -1004,13 +981,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-20" class="inner-level collapse collapsable-details  in ">
+    <div id="after-23" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.204</span>
 
           </div>
 
@@ -1019,6 +996,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-24" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_1018910088.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-24" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_1018910088.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -1028,11 +1020,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">Validate mandatory property error for <span class="argument">&quot;path&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.964</span>
 
 </div>
 
@@ -1051,9 +1043,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-21">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-25">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -1063,13 +1055,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-21" class="inner-level collapse collapsable-details  in ">
+    <div id="after-25" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.171</span>
 
           </div>
 
@@ -1078,6 +1070,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-26" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1481679663.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-26" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1481679663.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -1104,12 +1111,12 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 </div>
 
 
-  <span class="lead-duration duration">0.013</span>
+  <span class="lead-duration duration">6.902</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-22">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-27">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
   <span class="name">Verify GCS Sink properties validation errors for mandatory fields</span>
 
@@ -1120,11 +1127,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
   </span>
   <div class="description indention"></div>
 
-  <div id="element-22" class="collapse collapsable-details  in ">
+  <div id="element-27" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-23">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-28">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1136,7 +1143,7 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="before-23" class="inner-level collapse collapsable-details ">
+    <div id="before-28" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
@@ -1159,9 +1166,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-24">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-29">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -1171,15 +1178,15 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
   </div>
 
-  <div id="steps-24" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-29" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">Open Datafusion Project to configure pipeline</span>
 
-  <span class="lead-duration duration">0.013</span>
+  <span class="lead-duration duration">3.015</span>
 
 </div>
 
@@ -1187,41 +1194,6 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-25">
-          <a>org.openqa.selenium.WebDriverException:</a>
-      </div>
-      <div id="msg-25" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: headless chrome=92.0.4515.159)
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, get {url=http://localhost:11011/pipelines/ns/default/studio}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
-	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
-	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
-	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
-	at &#10045;.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/sink/GCSSinkError.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -1233,7 +1205,7 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-26">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-30">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1245,13 +1217,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-26" class="inner-level collapse collapsable-details ">
+    <div id="after-30" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.169</span>
+  <span class="lead-duration duration">0.286</span>
 
           </div>
 
@@ -1262,15 +1234,15 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
   <div class="embeddings inner-level">
   <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-27" class="collapsable-control">
+    <div data-toggle="collapse" data-target="#embedding-31" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_56785370.png" download target="_blank">
+      <a href="embeddings/embedding_930755242.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
-    <div id="embedding-27" class="collapse collapsable-details ">
+    <div id="embedding-31" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_56785370.png">
+        <img src="embeddings/embedding_930755242.png">
       </div>
     </div>
   </div>
@@ -1284,11 +1256,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">Sink is GCS</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.268</span>
 
 </div>
 
@@ -1307,9 +1279,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-28">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-32">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -1319,13 +1291,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-28" class="inner-level collapse collapsable-details  in ">
+    <div id="after-32" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.211</span>
 
           </div>
 
@@ -1334,6 +1306,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-33" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_670091516.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-33" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_670091516.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -1343,11 +1330,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">Open GCS sink properties</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.157</span>
 
 </div>
 
@@ -1366,9 +1353,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-29">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-34">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -1378,13 +1365,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-29" class="inner-level collapse collapsable-details  in ">
+    <div id="after-34" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.344</span>
 
           </div>
 
@@ -1393,6 +1380,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-35" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1081393924.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-35" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1081393924.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -1402,11 +1404,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">Enter the GCS properties with blank property <span class="argument">&quot;format&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.569</span>
 
 </div>
 
@@ -1425,9 +1427,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-30">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-36">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -1437,13 +1439,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-30" class="inner-level collapse collapsable-details  in ">
+    <div id="after-36" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.177</span>
 
           </div>
 
@@ -1452,6 +1454,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-37" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1451293830.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-37" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1451293830.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>
@@ -1461,11 +1478,11 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">Validate mandatory property error for <span class="argument">&quot;format&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.891</span>
 
 </div>
 
@@ -1484,9 +1501,9 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-31">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-38">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -1496,13 +1513,13 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
     </div>
 
-    <div id="after-31" class="inner-level collapse collapsable-details  in ">
+    <div id="after-38" class="inner-level collapse collapsable-details ">
         <div class="hook">
-          <div class="brief skipped">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">AfterActions.takeScreenshot(Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.157</span>
 
           </div>
 
@@ -1511,6 +1528,21 @@ Session ID: 52fc227fed97cfdc63f2a15096496b32
 
 
 
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-39" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-218639273.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-39" class="collapse collapsable-details ">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-218639273.png">
+      </div>
+    </div>
+  </div>
+  </div>
 
         </div>
     </div>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="465.335381">
-<testcase classname="GCS sink - Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="249.220588">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="132.207307">
+<testcase classname="GCS sink - Verification of GCS Sink plugin" name="To verify data is getting transferred successfully from BigQuery to GCS" time="108.309872">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is GCS............................................................passed
@@ -29,112 +29,28 @@ Then Verify data is transferred to target GCS bucket........................pass
 Then Validate the cmek key "cmekGCS" of target GCS bucket if cmek is enabled.passed
 ]]></system-out>
 </testcase>
-<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields" time="215.700608">
-<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()='Sink ']&quot;}&#10;  (Session info: headless chrome=92.0.4515.159)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [52fc227fed97cfdc63f2a15096496b32, findElement {using=xpath, value=//*[text()='Sink ']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 52fc227fed97cfdc63f2a15096496b32&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)&#10;&#9;at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)&#10;&#9;at com.sun.proxy.$Proxy23.click(Unknown Source)&#10;&#9;at io.cdap.e2e.pages.actions.CdfStudioActions.clickSink(CdfStudioActions.java:99)&#10;&#9;at io.cdap.plugin.gcs.stepsdesign.GCSSink.sinkIsGCS(GCSSink.java:38)&#10;&#9;at ✽.Sink is GCS(file:src/e2e-test/features/gcs/sink/GCSSinkError.feature:6)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
-When Sink is GCS............................................................failed
-Then Open GCS sink properties...............................................skipped
-Then Enter the GCS properties with blank property "referenceName"...........skipped
-Then Validate mandatory property error for "referenceName"..................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Sink ']"}
-  (Session info: headless chrome=92.0.4515.159)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, findElement {using=xpath, value=//*[text()='Sink ']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy23.click(Unknown Source)
-	at io.cdap.e2e.pages.actions.CdfStudioActions.clickSink(CdfStudioActions.java:99)
-	at io.cdap.plugin.gcs.stepsdesign.GCSSink.sinkIsGCS(GCSSink.java:38)
-	at ✽.Sink is GCS(file:src/e2e-test/features/gcs/sink/GCSSinkError.feature:6)
-]]></failure>
+<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields" time="8.084275">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is GCS............................................................passed
+Then Open GCS sink properties...............................................passed
+Then Enter the GCS properties with blank property "referenceName"...........passed
+Then Validate mandatory property error for "referenceName"..................passed
+]]></system-out>
 </testcase>
-<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields 2" time="0.230973">
-<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [52fc227fed97cfdc63f2a15096496b32, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 52fc227fed97cfdc63f2a15096496b32&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/sink/GCSSinkError.feature:5)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
-When Sink is GCS............................................................skipped
-Then Open GCS sink properties...............................................skipped
-Then Enter the GCS properties with blank property "path"....................skipped
-Then Validate mandatory property error for "path"...........................skipped
-
-StackTrace:
-org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: headless chrome=92.0.4515.159)
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, get {url=http://localhost:11011/pipelines/ns/default/studio}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
-	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
-	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
-	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
-	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/sink/GCSSinkError.feature:5)
-]]></failure>
+<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields 2" time="7.733786">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is GCS............................................................passed
+Then Open GCS sink properties...............................................passed
+Then Enter the GCS properties with blank property "path"....................passed
+Then Validate mandatory property error for "path"...........................passed
+]]></system-out>
 </testcase>
-<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields 3" time="0.183212">
-<failure message="org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [52fc227fed97cfdc63f2a15096496b32, get {url=http://localhost:11011/pipelines/ns/default/studio}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 52fc227fed97cfdc63f2a15096496b32&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)&#10;&#9;at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)&#10;&#9;at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)&#10;&#9;at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)&#10;&#9;at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/sink/GCSSinkError.feature:5)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................failed
-When Sink is GCS............................................................skipped
-Then Open GCS sink properties...............................................skipped
-Then Enter the GCS properties with blank property "format"..................skipped
-Then Validate mandatory property error for "format".........................skipped
-
-StackTrace:
-org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: headless chrome=92.0.4515.159)
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'runner-deployment-build-data-integrations-e2e-69959c6456-snvpv', ip: '10.116.9.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [52fc227fed97cfdc63f2a15096496b32, get {url=http://localhost:11011/pipelines/ns/default/studio}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.BhkENf}, goog:chromeOptions: {debuggerAddress: localhost:34997}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:34997/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 52fc227fed97cfdc63f2a15096496b32
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:326)
-	at io.cdap.e2e.utils.SeleniumDriver.openPage(SeleniumDriver.java:84)
-	at io.cdap.e2e.utils.CdfHelper.openCdf(CdfHelper.java:47)
-	at stepsdesign.PipelineSteps.openDatafusionProjectToConfigurePipeline(PipelineSteps.java:58)
-	at ✽.Open Datafusion Project to configure pipeline(file:src/e2e-test/features/gcs/sink/GCSSinkError.feature:5)
-]]></failure>
+<testcase classname="GCS sink - Verify GCS Sink plugin error scenarios" name="Verify GCS Sink properties validation errors for mandatory fields 3" time="8.079374">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is GCS............................................................passed
+Then Open GCS sink properties...............................................passed
+Then Enter the GCS properties with blank property "format"..................passed
+Then Validate mandatory property error for "format".........................passed
+]]></system-out>
 </testcase>
 </testsuite>
