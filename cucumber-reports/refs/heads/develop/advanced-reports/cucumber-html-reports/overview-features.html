@@ -50,7 +50,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                1024,
+                1108,
                 0,
                 0,
                 0,
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 1024) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1108) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,7 +106,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                65,
+                67,
                 0
             ],
             backgroundColor: [
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 65) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 67) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -153,7 +153,7 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   18,
+                   20,
                    0
                ],
                backgroundColor: [
@@ -187,7 +187,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 18) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 20) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reports</td>
         <td>1</td>
-      <td>16 Feb 2022, 16:29</td>
+      <td>17 Feb 2022, 13:15</td>
     </tr>
   </tbody>
 </table>
@@ -338,7 +338,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">8</td>
 
-        <td class="duration" data-value="74594698696">1:14.594</td>
+        <td class="duration" data-value="74943817274">1:14.943</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -355,7 +355,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">4</td>
 
-        <td class="duration" data-value="494712788977">8:14.712</td>
+        <td class="duration" data-value="488960298301">8:8.960</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -372,11 +372,28 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="117129911005">1:57.129</td>
+        <td class="duration" data-value="108921855519">1:48.921</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_3_1916888992.html">GCS sink - Verification of GCS Sink plugin</a></td>
+        <td class="tagname"><a href="report-feature_3_3801320276.html">BigQuery source - Verification of BigQuery to Multiple sinks successful data transfer</a></td>
+
+        <td      class="passed"    >42</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">42</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="181096280140">3:1.096</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_4_1916888992.html">GCS sink - Verification of GCS Sink plugin</a></td>
 
         <td      class="passed"    >26</td>
         <td >0</td>
@@ -389,11 +406,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="98326628310">1:38.326</td>
+        <td class="duration" data-value="99022807087">1:39.022</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_4_3972276214.html">GCS sink - Verify GCS Sink plugin error scenarios</a></td>
+        <td class="tagname"><a href="report-feature_5_3972276214.html">GCS sink - Verify GCS Sink plugin error scenarios</a></td>
 
         <td      class="passed"    >15</td>
         <td >0</td>
@@ -406,11 +423,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">3</td>
 
-        <td class="duration" data-value="19923436322">19.923</td>
+        <td class="duration" data-value="19956519369">19.956</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_5_1725327609.html">BigQuery sink - Verification of GCS to BigQuery successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_6_1725327609.html">BigQuery sink - Verification of GCS to BigQuery successful data transfer</a></td>
 
         <td      class="passed"    >30</td>
         <td >0</td>
@@ -423,11 +440,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="106189658323">1:46.189</td>
+        <td class="duration" data-value="96805514000">1:36.805</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_6_1921920923.html">BigQuery source - Verification of BigQuery to GCS successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_7_1921920923.html">BigQuery source - Verification of BigQuery to GCS successful data transfer</a></td>
 
         <td      class="passed"    >30</td>
         <td >0</td>
@@ -440,11 +457,28 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="113200338270">1:53.200</td>
+        <td class="duration" data-value="125854282130">2:5.854</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_7_1916888992.html">GCS sink - Verification of GCS Sink plugin</a></td>
+        <td class="tagname"><a href="report-feature_8_3801320276.html">BigQuery source - Verification of BigQuery to Multiple sinks successful data transfer</a></td>
+
+        <td      class="passed"    >42</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">42</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="199991732054">3:19.991</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-feature_9_1916888992.html">GCS sink - Verification of GCS Sink plugin</a></td>
 
         <td      class="passed"    >26</td>
         <td >0</td>
@@ -457,11 +491,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="110995790737">1:50.995</td>
+        <td class="duration" data-value="117021192559">1:57.021</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_8_1286682263.html">PubSub-Sink - Verification of BigQuery to PubSub successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_10_1286682263.html">PubSub-Sink - Verification of BigQuery to PubSub successful data transfer</a></td>
 
         <td      class="passed"    >32</td>
         <td >0</td>
@@ -474,11 +508,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="110204603598">1:50.204</td>
+        <td class="duration" data-value="109740055282">1:49.740</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_9_3503203353.html">PubSub-Sink - Verification of GCS to PubSub successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_11_3503203353.html">PubSub-Sink - Verification of GCS to PubSub successful data transfer</a></td>
 
         <td      class="passed"    >32</td>
         <td >0</td>
@@ -491,11 +525,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="85250311326">1:25.250</td>
+        <td class="duration" data-value="98490408748">1:38.490</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_10_1279981740.html">BigQuery sink - Validate BigQuery sink plugin error scenarios</a></td>
+        <td class="tagname"><a href="report-feature_12_1279981740.html">BigQuery sink - Validate BigQuery sink plugin error scenarios</a></td>
 
         <td      class="passed"    >15</td>
         <td >0</td>
@@ -508,11 +542,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">3</td>
 
-        <td class="duration" data-value="22324971293">22.324</td>
+        <td class="duration" data-value="22669555165">22.669</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_11_1725327609.html">BigQuery sink - Verification of GCS to BigQuery successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_13_1725327609.html">BigQuery sink - Verification of GCS to BigQuery successful data transfer</a></td>
 
         <td      class="passed"    >30</td>
         <td >0</td>
@@ -525,11 +559,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="93654132664">1:33.654</td>
+        <td class="duration" data-value="92721793209">1:32.721</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_12_3595776294.html">GCS source - Verify GCS Source plugin error scenarios</a></td>
+        <td class="tagname"><a href="report-feature_14_3595776294.html">GCS source - Verify GCS Source plugin error scenarios</a></td>
 
         <td      class="passed"    >68</td>
         <td >0</td>
@@ -542,11 +576,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">8</td>
 
-        <td class="duration" data-value="105581707743">1:45.581</td>
+        <td class="duration" data-value="107103446694">1:47.103</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_13_1710343571.html">GCS source - Verification of GCS to BQ successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_15_1710343571.html">GCS source - Verification of GCS to BQ successful data transfer</a></td>
 
         <td      class="passed"    >145</td>
         <td >0</td>
@@ -559,11 +593,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">6</td>
 
-        <td class="duration" data-value="458802093570">7:38.802</td>
+        <td class="duration" data-value="468987882937">7:48.987</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_14_4003804296.html">GCS source - Validate GCS plugin output schema for different formats</a></td>
+        <td class="tagname"><a href="report-feature_16_4003804296.html">GCS source - Validate GCS plugin output schema for different formats</a></td>
 
         <td      class="passed"    >42</td>
         <td >0</td>
@@ -576,11 +610,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">5</td>
 
-        <td class="duration" data-value="63176938700">1:3.176</td>
+        <td class="duration" data-value="63324681958">1:3.324</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_15_1286682263.html">PubSub-Sink - Verification of BigQuery to PubSub successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_17_1286682263.html">PubSub-Sink - Verification of BigQuery to PubSub successful data transfer</a></td>
 
         <td      class="passed"    >32</td>
         <td >0</td>
@@ -593,11 +627,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="104534120468">1:44.534</td>
+        <td class="duration" data-value="114325999335">1:54.325</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_16_3503203353.html">PubSub-Sink - Verification of GCS to PubSub successful data transfer</a></td>
+        <td class="tagname"><a href="report-feature_18_3503203353.html">PubSub-Sink - Verification of GCS to PubSub successful data transfer</a></td>
 
         <td      class="passed"    >212</td>
         <td >0</td>
@@ -610,11 +644,11 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">7</td>
 
-        <td class="duration" data-value="551968682532">9:11.968</td>
+        <td class="duration" data-value="566227966413">9:26.227</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_17_1046707832.html">PubSub-Sink - Verify PubSub sink plugin error Scenarios</a></td>
+        <td class="tagname"><a href="report-feature_19_1046707832.html">PubSub-Sink - Verify PubSub sink plugin error Scenarios</a></td>
 
         <td      class="passed"    >100</td>
         <td >0</td>
@@ -627,7 +661,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">12</td>
 
-        <td class="duration" data-value="89909601218">1:29.909</td>
+        <td class="duration" data-value="98768312861">1:38.768</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -635,19 +669,19 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>1024</td>
+      <td>1108</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1024</td>
+      <td>1108</td>
 
-      <td>65</td>
+      <td>67</td>
       <td>0</td>
-      <td>65</td>
+      <td>67</td>
 
-      <td class="duration">47:0.480</td>
-      <td>18</td>
+      <td class="duration">54:14.934</td>
+      <td>20</td>
     </tr>
     <tr>
       <td></td>
