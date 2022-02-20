@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="14" time="941.554539">
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields" time="11.214793">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="14" time="953.793361">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields" time="10.48351">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -8,7 +8,7 @@ Then Enter the BigQuery properties with blank property "referenceName"......pass
 Then Validate mandatory property error for "referenceName"..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 2" time="7.83897">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 2" time="7.843283">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -16,7 +16,7 @@ Then Enter the BigQuery properties with blank property "dataset"............pass
 Then Validate mandatory property error for "dataset"........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 3" time="8.074643">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for mandatory fields 3" time="7.690047">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -24,7 +24,7 @@ Then Enter the BigQuery properties with blank property "table"..............pass
 Then Validate mandatory property error for "table"..........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values" time="16.832758">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values" time="15.851342">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -33,7 +33,7 @@ Then Enter the BigQuery source properties with incorrect property "dataset" valu
 Then Validate BigQuery source incorrect property error for table "dataset" value "bqIncorrectDataset".passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 2" time="17.346216">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 2" time="16.854834">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -42,7 +42,7 @@ Then Enter the BigQuery source properties with incorrect property "table" value 
 Then Validate BigQuery source incorrect property error for table "table" value "bqIncorrectTableName".passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 3" time="15.398055">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect values 3" time="23.250023">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -51,7 +51,7 @@ Then Enter the BigQuery source properties with incorrect property "datasetProjec
 Then Validate BigQuery source incorrect property error for table "datasetProject" value "bqIncorrectDatasetProjectId".passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds" time="10.910656">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds" time="10.438275">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -63,7 +63,7 @@ Then Enter BigQuery source property table name..............................pass
 Then Verify plugin properties validation fails with 1 error.................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds 2" time="10.344352">
+<testcase classname="BigQuery source - Validate BigQuery source plugin error scenarios" name="Verify BigQuery Source properties validation errors for incorrect format of projectIds 2" time="10.282643">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 Then Open BigQuery source properties........................................passed
@@ -75,7 +75,7 @@ Then Enter BigQuery source property table name..............................pass
 Then Verify plugin properties validation fails with 1 error.................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate successful records transfer from BigQuery to BigQuery with filter" time="189.926513">
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate successful records transfer from BigQuery to BigQuery with filter" time="189.645593">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is BigQuery.......................................................passed
@@ -109,7 +109,7 @@ Then Get count of no of records transferred to target BigQuery Table........pass
 Then Validate records transferred to target table is equal to number of records from source table with filter "bqFilter".passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate that pipeline run preview gets failed when incorrect filter values are provided" time="58.857295">
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Validate that pipeline run preview gets failed when incorrect filter values are provided" time="62.617053">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is BigQuery.......................................................passed
@@ -133,7 +133,7 @@ Then Preview and run the pipeline...........................................pass
 Then Verify the preview of pipeline is "failed".............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are getting transferred with respect to partitioned date" time="185.57686">
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are getting transferred with respect to partitioned date" time="192.422891">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is BigQuery.......................................................passed
@@ -167,7 +167,7 @@ Then Get count of no of records transferred to target BigQuery Table........pass
 Then Validate partition date in output partitioned table....................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are not getting transferred for future partitioned date" time="93.403162">
+<testcase classname="BigQuery source - Verification of BigQuery to BigQuery successful data transfer" name="Verify records are not getting transferred for future partitioned date" time="92.040788">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is BigQuery.......................................................passed
@@ -195,7 +195,7 @@ Then Validate the records are not created in output table...................pass
 Then Validate partitioning is not done on the output table..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to GCS successful data transfer" name="Validate successful records transfer from BigQuery to GCS" time="115.449743">
+<testcase classname="BigQuery source - Verification of BigQuery to GCS successful data transfer" name="Validate successful records transfer from BigQuery to GCS" time="110.113506">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 When Source is BigQuery.....................................................passed
 When Sink is GCS............................................................passed
@@ -228,7 +228,7 @@ Then Verify the pipeline status is "Succeeded"..............................pass
 Then Verify data is transferred to target GCS bucket........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BigQuery source - Verification of BigQuery to Multiple sinks successful data transfer" name="Validate successful records transfer from BigQuery to multiple sinks (GCS, BigQuery and PubSub)" time="200.380523">
+<testcase classname="BigQuery source - Verification of BigQuery to Multiple sinks successful data transfer" name="Validate successful records transfer from BigQuery to multiple sinks (GCS, BigQuery and PubSub)" time="204.259573">
 <system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
 And Wait for page to render properly........................................passed
 When Source is BigQuery.....................................................passed
