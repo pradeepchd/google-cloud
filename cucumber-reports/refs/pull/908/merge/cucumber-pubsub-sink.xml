@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="20" time="761.312523">
+<testcase classname="PubSub-Sink - Verification of BigQuery to PubSub successful data transfer" name="To verify data is getting transferred from BigQuery to PubSub successfully" time="110.5632">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is BigQuery.....................................................passed
+When Sink is PubSub.........................................................passed
+Then Connect source as "BigQuery" and sink as "GooglePublisher" to establish connection.passed
+Then Open BigQuery source properties........................................passed
+Then Enter the BigQuery source mandatory properties.........................passed
+Then Validate "BigQuery" plugin properties..................................passed
+Then Close the BigQuery properties..........................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub sink property topic name..................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter PubSub sink property encryption key name "cmekPubSub" if cmek is enabled.passed
+Then Enter PubSub sink property MaximumBatchCount "pubSubMaximumBatchCount".passed
+Then Enter PubSub sink property MaximumBatchSize "pubSubMaximumBatchSize"...passed
+Then Enter PubSub sink property PublishDelayThreshold "pubSubPublishDelayThreshold".passed
+Then Enter PubSub sink property RetryTimeOut "pubSubRetryTimeOut"...........passed
+Then Enter PubSub sink property ErrorThreshold "pubSubErrorThreshold".......passed
+Then Validate "PubSub" plugin properties....................................passed
+Then Close the PubSub properties............................................passed
+Then Save the pipeline......................................................passed
+Then Preview and run the pipeline...........................................passed
+Then Verify the preview of pipeline is "success"............................passed
+Then Close the preview......................................................passed
+Then Deploy the pipeline....................................................passed
+Then Run the Pipeline in Runtime............................................passed
+Then Wait till pipeline is in running state.................................passed
+Then Verify the pipeline status is "Succeeded"..............................passed
+Then Validate OUT record count is equal to IN record count..................passed
+Then Open and capture logs..................................................passed
+Then Validate the cmek key "cmekPubSub" of target PubSub topic if cmek is enabled.passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verification of GCS to PubSub successful data transfer" name="To verify data is getting transferred from GCS to PubSub successfully" time="87.406747">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+When Sink is PubSub.........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS source mandatory properties..............................passed
+Then Validate "GCS" plugin properties.......................................passed
+Then Close the GCS properties...............................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub sink property topic name..................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter PubSub sink property encryption key name "cmekPubSub" if cmek is enabled.passed
+Then Enter PubSub sink property MaximumBatchCount "pubSubMaximumBatchCount".passed
+Then Enter PubSub sink property MaximumBatchSize "pubSubMaximumBatchSize"...passed
+Then Enter PubSub sink property PublishDelayThreshold "pubSubPublishDelayThreshold".passed
+Then Enter PubSub sink property RetryTimeOut "pubSubRetryTimeOut"...........passed
+Then Enter PubSub sink property ErrorThreshold "pubSubErrorThreshold".......passed
+Then Validate "PubSub" plugin properties....................................passed
+Then Close the PubSub properties............................................passed
+Then Connect source as "GCS" and sink as "GooglePublisher" to establish connection.passed
+Then Save the pipeline......................................................passed
+Then Preview and run the pipeline...........................................passed
+Then Verify the preview of pipeline is "success"............................passed
+Then Close the preview......................................................passed
+Then Deploy the pipeline....................................................passed
+Then Run the Pipeline in Runtime............................................passed
+Then Wait till pipeline is in running state.................................passed
+Then Verify the pipeline status is "Succeeded"..............................passed
+Then Validate OUT record count is equal to IN record count..................passed
+Then Open and capture logs..................................................passed
+Then Validate the cmek key "cmekPubSub" of target PubSub topic if cmek is enabled.passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verification of GCS to PubSub successful data transfer" name="Verify data is getting transferred from GCS to PubSub for different file formats." time="85.062783">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+When Sink is PubSub.........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS source mandatory properties..............................passed
+Then Validate "GCS" plugin properties.......................................passed
+Then Close the GCS properties...............................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub sink property topic name..................................passed
+Then Select PubSub property format "text"...................................passed
+Then Enter PubSub sink property MaximumBatchCount "pubSubMaximumBatchCount".passed
+Then Enter PubSub sink property MaximumBatchSize "pubSubMaximumBatchSize"...passed
+Then Enter PubSub sink property PublishDelayThreshold "pubSubPublishDelayThreshold".passed
+Then Enter PubSub sink property RetryTimeOut "pubSubRetryTimeOut"...........passed
+Then Enter PubSub sink property ErrorThreshold "pubSubErrorThreshold".......passed
+Then Validate "PubSub" plugin properties....................................passed
+Then Close the PubSub properties............................................passed
+Then Connect source as "GCS" and sink as "GooglePublisher" to establish connection.passed
+Then Save the pipeline......................................................passed
+Then Preview and run the pipeline...........................................passed
+Then Verify the preview of pipeline is "success"............................passed
+Then Close the preview......................................................passed
+Then Deploy the pipeline....................................................passed
+Then Run the Pipeline in Runtime............................................passed
+Then Wait till pipeline is in running state.................................passed
+Then Verify the pipeline status is "Succeeded"..............................passed
+Then Validate OUT record count is equal to IN record count..................passed
+Then Open and capture logs..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verification of GCS to PubSub successful data transfer" name="Verify data is getting transferred from GCS to PubSub for different file formats. 2" time="86.862778">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+When Sink is PubSub.........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS source mandatory properties..............................passed
+Then Validate "GCS" plugin properties.......................................passed
+Then Close the GCS properties...............................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub sink property topic name..................................passed
+Then Select PubSub property format "avro"...................................passed
+Then Enter PubSub sink property MaximumBatchCount "pubSubMaximumBatchCount".passed
+Then Enter PubSub sink property MaximumBatchSize "pubSubMaximumBatchSize"...passed
+Then Enter PubSub sink property PublishDelayThreshold "pubSubPublishDelayThreshold".passed
+Then Enter PubSub sink property RetryTimeOut "pubSubRetryTimeOut"...........passed
+Then Enter PubSub sink property ErrorThreshold "pubSubErrorThreshold".......passed
+Then Validate "PubSub" plugin properties....................................passed
+Then Close the PubSub properties............................................passed
+Then Connect source as "GCS" and sink as "GooglePublisher" to establish connection.passed
+Then Save the pipeline......................................................passed
+Then Preview and run the pipeline...........................................passed
+Then Verify the preview of pipeline is "success"............................passed
+Then Close the preview......................................................passed
+Then Deploy the pipeline....................................................passed
+Then Run the Pipeline in Runtime............................................passed
+Then Wait till pipeline is in running state.................................passed
+Then Verify the pipeline status is "Succeeded"..............................passed
+Then Validate OUT record count is equal to IN record count..................passed
+Then Open and capture logs..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verification of GCS to PubSub successful data transfer" name="Verify data is getting transferred from GCS to PubSub for different file formats. 3" time="83.882837">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+When Sink is PubSub.........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS source mandatory properties..............................passed
+Then Validate "GCS" plugin properties.......................................passed
+Then Close the GCS properties...............................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub sink property topic name..................................passed
+Then Select PubSub property format "blob"...................................passed
+Then Enter PubSub sink property MaximumBatchCount "pubSubMaximumBatchCount".passed
+Then Enter PubSub sink property MaximumBatchSize "pubSubMaximumBatchSize"...passed
+Then Enter PubSub sink property PublishDelayThreshold "pubSubPublishDelayThreshold".passed
+Then Enter PubSub sink property RetryTimeOut "pubSubRetryTimeOut"...........passed
+Then Enter PubSub sink property ErrorThreshold "pubSubErrorThreshold".......passed
+Then Validate "PubSub" plugin properties....................................passed
+Then Close the PubSub properties............................................passed
+Then Connect source as "GCS" and sink as "GooglePublisher" to establish connection.passed
+Then Save the pipeline......................................................passed
+Then Preview and run the pipeline...........................................passed
+Then Verify the preview of pipeline is "success"............................passed
+Then Close the preview......................................................passed
+Then Deploy the pipeline....................................................passed
+Then Run the Pipeline in Runtime............................................passed
+Then Wait till pipeline is in running state.................................passed
+Then Verify the pipeline status is "Succeeded"..............................passed
+Then Validate OUT record count is equal to IN record count..................passed
+Then Open and capture logs..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verification of GCS to PubSub successful data transfer" name="Verify data is getting transferred from GCS to PubSub for different file formats. 4" time="88.81803">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+When Sink is PubSub.........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS source mandatory properties..............................passed
+Then Validate "GCS" plugin properties.......................................passed
+Then Close the GCS properties...............................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub sink property topic name..................................passed
+Then Select PubSub property format "tsv"....................................passed
+Then Enter PubSub sink property MaximumBatchCount "pubSubMaximumBatchCount".passed
+Then Enter PubSub sink property MaximumBatchSize "pubSubMaximumBatchSize"...passed
+Then Enter PubSub sink property PublishDelayThreshold "pubSubPublishDelayThreshold".passed
+Then Enter PubSub sink property RetryTimeOut "pubSubRetryTimeOut"...........passed
+Then Enter PubSub sink property ErrorThreshold "pubSubErrorThreshold".......passed
+Then Validate "PubSub" plugin properties....................................passed
+Then Close the PubSub properties............................................passed
+Then Connect source as "GCS" and sink as "GooglePublisher" to establish connection.passed
+Then Save the pipeline......................................................passed
+Then Preview and run the pipeline...........................................passed
+Then Verify the preview of pipeline is "success"............................passed
+Then Close the preview......................................................passed
+Then Deploy the pipeline....................................................passed
+Then Run the Pipeline in Runtime............................................passed
+Then Wait till pipeline is in running state.................................passed
+Then Verify the pipeline status is "Succeeded"..............................passed
+Then Validate OUT record count is equal to IN record count..................passed
+Then Open and capture logs..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verification of GCS to PubSub successful data transfer" name="Verify data is getting transferred from GCS to PubSub for different file formats. 5" time="88.30773">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+When Sink is PubSub.........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS source mandatory properties..............................passed
+Then Validate "GCS" plugin properties.......................................passed
+Then Close the GCS properties...............................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub sink property topic name..................................passed
+Then Select PubSub property format "json"...................................passed
+Then Enter PubSub sink property MaximumBatchCount "pubSubMaximumBatchCount".passed
+Then Enter PubSub sink property MaximumBatchSize "pubSubMaximumBatchSize"...passed
+Then Enter PubSub sink property PublishDelayThreshold "pubSubPublishDelayThreshold".passed
+Then Enter PubSub sink property RetryTimeOut "pubSubRetryTimeOut"...........passed
+Then Enter PubSub sink property ErrorThreshold "pubSubErrorThreshold".......passed
+Then Validate "PubSub" plugin properties....................................passed
+Then Close the PubSub properties............................................passed
+Then Connect source as "GCS" and sink as "GooglePublisher" to establish connection.passed
+Then Save the pipeline......................................................passed
+Then Preview and run the pipeline...........................................passed
+Then Verify the preview of pipeline is "success"............................passed
+Then Close the preview......................................................passed
+Then Deploy the pipeline....................................................passed
+Then Run the Pipeline in Runtime............................................passed
+Then Wait till pipeline is in running state.................................passed
+Then Verify the pipeline status is "Succeeded"..............................passed
+Then Validate OUT record count is equal to IN record count..................passed
+Then Open and capture logs..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verification of GCS to PubSub successful data transfer" name="Verify data is getting transferred from GCS to PubSub for different file formats. 6" time="22.444076">
+<failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;li class=&quot;MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button&quot; tabindex=&quot;-1&quot; role=&quot;option&quot; aria-disabled=&quot;false&quot; data-cy=&quot;option-parquet&quot; data-value=&quot;parquet&quot;&gt;...&lt;/li&gt; is not clickable at point (1114, 717). Other element would receive the click: &lt;li class=&quot;MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button&quot; tabindex=&quot;-1&quot; role=&quot;option&quot; aria-disabled=&quot;false&quot; data-cy=&quot;option-delimited&quot; data-value=&quot;delimited&quot;&gt;...&lt;/li&gt;&#10;  (Session info: headless chrome=92.0.4515.159)&#10;Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'&#10;System info: host: 'runner-deployment-build-e2e-data-integrations-978f754d-bkq48', ip: '10.116.5.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [353c3b3366b614c64d43d71427044c58, clickElement {id=02ab3df5-9924-4d9c-982b-6bdd3ede2c6c}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.cGV1F9}, goog:chromeOptions: {debuggerAddress: localhost:40953}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40953/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on LINUX (353c3b3366b614c64d43d71427044c58)] -&gt; xpath: //li[@data-value='parquet']]&#10;Session ID: 353c3b3366b614c64d43d71427044c58&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)&#10;&#9;at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)&#10;&#9;at io.cdap.plugin.pubsub.actions.PubSubActions.selectFormat(PubSubActions.java:55)&#10;&#9;at io.cdap.plugin.pubsub.stepsdesign.PubSubBase.selectPubSubPropertyFormat(PubSubBase.java:42)&#10;&#9;at ✽.Select PubSub property format &quot;parquet&quot;(file:src/e2e-test/features/pubsub/sink/GCSToPubSub.feature:52)&#10;"><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Source is GCS..........................................................passed
+When Sink is PubSub.........................................................passed
+Then Open GCS source properties.............................................passed
+Then Enter the GCS source mandatory properties..............................passed
+Then Validate "GCS" plugin properties.......................................passed
+Then Close the GCS properties...............................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub sink property topic name..................................passed
+Then Select PubSub property format "parquet"................................failed
+Then Enter PubSub sink property MaximumBatchCount "pubSubMaximumBatchCount".skipped
+Then Enter PubSub sink property MaximumBatchSize "pubSubMaximumBatchSize"...skipped
+Then Enter PubSub sink property PublishDelayThreshold "pubSubPublishDelayThreshold".skipped
+Then Enter PubSub sink property RetryTimeOut "pubSubRetryTimeOut"...........skipped
+Then Enter PubSub sink property ErrorThreshold "pubSubErrorThreshold".......skipped
+Then Validate "PubSub" plugin properties....................................skipped
+Then Close the PubSub properties............................................skipped
+Then Connect source as "GCS" and sink as "GooglePublisher" to establish connection.skipped
+Then Save the pipeline......................................................skipped
+Then Preview and run the pipeline...........................................skipped
+Then Verify the preview of pipeline is "success"............................skipped
+Then Close the preview......................................................skipped
+Then Deploy the pipeline....................................................skipped
+Then Run the Pipeline in Runtime............................................skipped
+Then Wait till pipeline is in running state.................................skipped
+Then Verify the pipeline status is "Succeeded"..............................skipped
+Then Validate OUT record count is equal to IN record count..................skipped
+Then Open and capture logs..................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="-1" role="option" aria-disabled="false" data-cy="option-parquet" data-value="parquet">...</li> is not clickable at point (1114, 717). Other element would receive the click: <li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="-1" role="option" aria-disabled="false" data-cy="option-delimited" data-value="delimited">...</li>
+  (Session info: headless chrome=92.0.4515.159)
+Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
+System info: host: 'runner-deployment-build-e2e-data-integrations-978f754d-bkq48', ip: '10.116.5.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.144+', java.version: '1.8.0_292'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [353c3b3366b614c64d43d71427044c58, clickElement {id=02ab3df5-9924-4d9c-982b-6bdd3ede2c6c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /tmp/.com.google.Chrome.cGV1F9}, goog:chromeOptions: {debuggerAddress: localhost:40953}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40953/devtoo..., se:cdpVersion: 92.0.4515.159, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on LINUX (353c3b3366b614c64d43d71427044c58)] -> xpath: //li[@data-value='parquet']]
+Session ID: 353c3b3366b614c64d43d71427044c58
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at io.cdap.plugin.pubsub.actions.PubSubActions.selectFormat(PubSubActions.java:55)
+	at io.cdap.plugin.pubsub.stepsdesign.PubSubBase.selectPubSubPropertyFormat(PubSubBase.java:42)
+	at ✽.Select PubSub property format "parquet"(file:src/e2e-test/features/pubsub/sink/GCSToPubSub.feature:52)
+]]></failure>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify PubSub sink properties validation errors for mandatory fields" time="6.826913">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter the PubSub sink properties with blank property "referenceName"...passed
+Then Validate mandatory property error for "referenceName"..................passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify PubSub sink properties validation errors for mandatory fields 2" time="7.430715">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter the PubSub sink properties with blank property "topic"...........passed
+Then Validate mandatory property error for "topic"..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for incorrect values in pubsub advanced properties" time="9.898238">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with incorrect property "messageCountBatchSize".passed
+Then Validate the error message for invalid PubSub sink advanced property "messageCountBatchSize".passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for incorrect values in pubsub advanced properties 2" time="9.587032">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with incorrect property "requestThresholdKB".passed
+Then Validate the error message for invalid PubSub sink advanced property "requestThresholdKB".passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for incorrect values in pubsub advanced properties 3" time="9.577991">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with incorrect property "publishDelayThresholdMillis".passed
+Then Validate the error message for invalid PubSub sink advanced property "publishDelayThresholdMillis".passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for incorrect values in pubsub advanced properties 4" time="9.621912">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with incorrect property "retryTimeoutSeconds".passed
+Then Validate the error message for invalid PubSub sink advanced property "retryTimeoutSeconds".passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for incorrect values in pubsub advanced properties 5" time="9.033937">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with incorrect property "errorThreshold".passed
+Then Validate the error message for invalid PubSub sink advanced property "errorThreshold".passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for negative values pubsub advanced properties" time="9.341189">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with invalid number for property "messageCountBatchSize".passed
+Then Validate the number format error message for PubSub sink property "messageCountBatchSize".passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for negative values pubsub advanced properties 2" time="9.130683">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with invalid number for property "requestThresholdKB".passed
+Then Validate the number format error message for PubSub sink property "requestThresholdKB".passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for negative values pubsub advanced properties 3" time="9.176784">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with invalid number for property "publishDelayThresholdMillis".passed
+Then Validate the number format error message for PubSub sink property "publishDelayThresholdMillis".passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for negative values pubsub advanced properties 4" time="9.292349">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with invalid number for property "retryTimeoutSeconds".passed
+Then Validate the number format error message for PubSub sink property "retryTimeoutSeconds".passed
+]]></system-out>
+</testcase>
+<testcase classname="PubSub-Sink - Verify PubSub sink plugin error Scenarios" name="Verify errors for negative values pubsub advanced properties 5" time="9.046599">
+<system-out><![CDATA[Given Open Datafusion Project to configure pipeline.........................passed
+When Sink is PubSub.........................................................passed
+Then Open the PubSub sink properties........................................passed
+Then Enter PubSub property reference name...................................passed
+Then Enter PubSub property projectId "projectId"............................passed
+Then Enter PubSub topic name "dummytopic"...................................passed
+Then Select PubSub property format "csv"....................................passed
+Then Enter the PubSub sink advanced properties with invalid number for property "errorThreshold".passed
+Then Validate the number format error message for PubSub sink property "errorThreshold".passed
+]]></system-out>
+</testcase>
+</testsuite>
